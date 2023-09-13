@@ -7,8 +7,8 @@ Esta solução elimina a falha do Jogador que voa, quando em caso do mesmo se po
 
   Caso queira tornar este repositorio em um projeto GODOT siga:
 
-  1.Faça download deste repositorio
-  2.Extraia o arquivo zip para sua pasta de projetos GODOT
-  3.Inicialize o godot e clique em Import
-  4.clique na opção Browse e dentro da pasta extraida, clique em godot.project
-  5.clique em Import&Edit
+  1. Faça download deste repositorio
+  2. Extraia o arquivo zip para sua pasta de projetos GODOT
+  3. Inicialize o godot e clique em Import
+  4. clique na opção Browse e dentro da pasta extraida, clique em godot.project
+  5. clique em Import&Edit
