@@ -10,7 +10,7 @@ Desabilitando e habilitando a camada de colisão do objeto, esta solução elimi
   1. Faça download deste repositorio
   2. Extraia o arquivo zip para sua pasta de projetos GODOT
   3. Inicialize o godot e clique em Import
-  4. clique na opção Browse e dentro da pasta extraida, clique em godot.project
+  4. clique na opção Browse e dentro da pasta extraida clique em godot.project
   5. clique em Import&Edit
 
 ## Importante
