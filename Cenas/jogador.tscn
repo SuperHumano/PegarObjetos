@@ -1,0 +1,32 @@
+[gd_scene load_steps=4 format=3 uid="uid://g1l8mhpccvds"]
+
+[ext_resource type="Script" path="res://Roteiros/Jogador.gd" id="1_dvaho"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_1ob4p"]
+radius = 0.3
+height = 1.83
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_4biq5"]
+points = PackedVector3Array(0.221742, 0.758699, 0.140449, -0.290153, -0.670696, -0.0485643, -0.291669, -0.674143, 0.0319488, 0.275303, -0.702841, -0.0760384, -0.0485643, 0.670696, -0.290153, -0.127142, 0.634777, 0.269454, 0.0856339, -0.698831, 0.27376, -0.290156, 0.670704, -0.0485649, -0.103278, -0.704318, -0.265871, 0.188831, 0.630383, -0.231322, 0.0843533, -0.634867, -0.285981, -0.103347, -0.78611, 0.221811, -0.078645, 0.892912, -0.078645, 0.294341, 0.604924, 0.0575663, 0.245047, -0.666737, 0.165032, 0.135576, 0.626988, 0.266209, 0.0883957, -0.889612, -0.0783359, -0.233785, 0.663389, -0.18069, -0.231321, 0.630382, 0.188831, -0.177691, -0.626667, 0.239985, -0.0500821, 0.855298, 0.170543, 0.142926, 0.855375, -0.105293, -0.160408, -0.854906, -0.0776743, -0.0477782, -0.608018, 0.295821, 0.269457, 0.634783, -0.127143, 0.239987, -0.626674, -0.177693, -0.18069, -0.663389, -0.233785, 0.0881191, -0.886662, 0.0881191, 0.0575663, 0.604924, 0.294341, 0.295821, -0.608018, -0.0477782, 0.236058, 0.590459, 0.184693, -0.291664, 0.674131, 0.0319483)
+
+[node name="Jogador" type="CharacterBody3D"]
+script = ExtResource("1_dvaho")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.94459, 0)
+mesh = SubResource("CapsuleMesh_1ob4p")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.94459, 0)
+shape = SubResource("ConvexPolygonShape3D_4biq5")
+
+[node name="Neck" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.50881, 0)
+
+[node name="Camera3D" type="Camera3D" parent="Neck"]
+
+[node name="RayCast3D" type="RayCast3D" parent="Neck/Camera3D"]
+target_position = Vector3(0, 0, -40)
+
+[node name="Marker3D" type="Marker3D" parent="Neck/Camera3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.5)

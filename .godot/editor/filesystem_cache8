@@ -1,3 +1,11 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1694625512
+::res://::1694635636
 icon.svg::CompressedTexture2D::1255476014326855718::1694625498::1694625518::1::::<><>::
+::res://Cenas/::1694635464
+caixa.tscn::PackedScene::816217566369315930::1694635464::0::1::::<><>::
+jogador.tscn::PackedScene::475534343331180828::1694635464::0::1::::<><>::res://Roteiros/Jogador.gd
+mundo.tscn::PackedScene::4412754771918583034::1694635464::0::1::::<><>::uid://blh7w0nxh2byc::::res://Cru/casa para testes.blend<>uid://g1l8mhpccvds::::res://Cenas/jogador.tscn<>uid://lvm8pt1ps54i::::res://Cenas/caixa.tscn
+::res://Cru/::1694628559
+casa para testes.blend::PackedScene::3174932173445953566::1694628521::1694628559::1::::<><>::
+::res://Roteiros/::1694635464
+Jogador.gd::GDScript::-1::1694635464::0::1::::<>CharacterBody3D<>::

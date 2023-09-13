@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://lvm8pt1ps54i"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_8mugf"]
+size = Vector3(0.7, 0.7, 0.7)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_b1636"]
+points = PackedVector3Array(-0.349981, -0.35, -0.35, 0.35, 0.35, 0.35, 0.35, 0.35, -0.35, -0.349981, 0.35, 0.35, 0.35, -0.35, 0.35, -0.349981, 0.35, -0.35, -0.349981, -0.35, 0.35, 0.35, -0.35, -0.35)
+
+[node name="RigidBody3D" type="RigidBody3D" groups=["objeto"]]
+collision_mask = 3
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("BoxMesh_8mugf")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("ConvexPolygonShape3D_b1636")

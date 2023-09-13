@@ -1,0 +1,38 @@
+[gd_scene load_steps=7 format=3 uid="uid://b34toq5rtcd11"]
+
+[ext_resource type="PackedScene" uid="uid://blh7w0nxh2byc" path="res://Cru/casa para testes.blend" id="1_xhk2r"]
+[ext_resource type="PackedScene" uid="uid://g1l8mhpccvds" path="res://Cenas/jogador.tscn" id="2_1hkol"]
+[ext_resource type="PackedScene" uid="uid://lvm8pt1ps54i" path="res://Cenas/caixa.tscn" id="3_ky6j3"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_2kcju"]
+sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+
+[sub_resource type="Sky" id="Sky_hwd2q"]
+sky_material = SubResource("ProceduralSkyMaterial_2kcju")
+
+[sub_resource type="Environment" id="Environment_usd3x"]
+background_mode = 2
+sky = SubResource("Sky_hwd2q")
+tonemap_mode = 2
+glow_enabled = true
+
+[node name="Mundo" type="Node"]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.866025, -0.433013, 0.25, 0, 0.5, 0.866025, -0.5, 0.75, -0.433013, 0, 0, 0)
+shadow_enabled = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_usd3x")
+
+[node name="casa para testes" parent="." instance=ExtResource("1_xhk2r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
+
+[node name="Jogador" parent="." instance=ExtResource("2_1hkol")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 8)
+collision_layer = 2
+collision_mask = 3
+
+[node name="RigidBody3D" parent="." instance=ExtResource("3_ky6j3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
