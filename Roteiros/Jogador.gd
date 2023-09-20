@@ -75,10 +75,12 @@ func _interact():
 				# Pega o objeto
 				if collider.is_in_group("objeto"):
 					collider.collision_layer &= ~(1 << 0)
+					# Pode ser realizado também através de: .set_collision_layer_value(1,false)
 					object_picked = collider
 				# Ativa a função interact em objetos interagíveis
 				elif collider.is_in_group("interagivel"):
 					collider.interact()
 	else:
 		object_picked.collision_layer |= (1 << 0)
+		# Pode ser realizado também através de: .set_collision_layer_value(1,true)
 		object_picked = null
