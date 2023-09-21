@@ -76,7 +76,7 @@ func _interact():
 				if collider.is_in_group("objeto"):
 					# Pode ser realizado também através de: .set_collision_layer_value(1,false)
 					collider.collision_layer &= ~(1 << 0)
-					# Timer para evitar pulo involuntário caso jogador etiver por cima do objeto
+					# Timer para evitar pulo involuntário caso jogador estiver por cima do objeto
 					await get_tree().create_timer(0.1).timeout
 					object_picked = collider
 				# Ativa a função interact em objetos interagíveis
